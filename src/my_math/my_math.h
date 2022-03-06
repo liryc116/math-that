@@ -11,6 +11,4 @@ double my_log(double x);
 
 double my_pow(double x, double y);
 
-#include "arc_trig.h"
-
 #endif /* ! MY_MATH_H */

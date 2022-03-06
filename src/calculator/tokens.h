@@ -16,6 +16,8 @@ struct token
 
 struct token *token_new(char *str, enum kinds kind);
 
+void token_free(void *t);
+
 int is_mul_div(struct token *t);
 
 int is_add_min(struct token *t);

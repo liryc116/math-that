@@ -15,6 +15,11 @@ struct token *token_new(char *str, enum kinds kind)
     return tok;
 }
 
+void token_free(void *t)
+{
+    free((struct token *) t);
+}
+
 int is_mul_div(struct token *t)
 {
     return t->kind==Operator && (t->value=='*' || t->value=='/');
