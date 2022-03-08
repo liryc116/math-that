@@ -21,8 +21,6 @@ jobs:
 
     - name: Build (gcc)
       run: |
+        make all
         make clean
         #make ASAN=1 DEBUG=1 -j
-
-    - name: Run Tests
-      run: make run-test
