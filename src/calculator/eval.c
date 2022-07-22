@@ -30,7 +30,7 @@ double eval(struct tree *ast)
         else if(tok->value=='/')
             res = eval(ast->left)/eval(ast->right);
         else // if(is_pow(token))
-            res = my_pow(eval(ast->left), eval(ast->right));
+            res = my_pow(eval(ast->right), eval(ast->left));
 
         ast->right = NULL;
         ast->left = NULL;

@@ -9,6 +9,8 @@ double my_exp(double x);
 
 double my_log(double x);
 
+double my_dpow(double x, double y);
+
 double my_pow(double x, double y);
 
 #endif /* ! MY_MATH_H */

@@ -13,7 +13,7 @@ void stack_to_vect(struct vector *v, struct list *stack, size_t size)
 {
         struct token *t = list_pop_front(stack);
         vector_push(v, t, size);
-        printf("%c\n", (int)t->value);
+        //printf("%c\n", (int)t->value);
         token_free(t);
 }
 
