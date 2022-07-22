@@ -29,7 +29,8 @@ int unload_stack(struct vector *v, struct list *stack)
 int should_pop(struct token *o1, struct token *o2)
 {
     return o2->kind!=Separator &&
-        (is_mul_div(o2) || is_add_min(o1) );
+        (has_greater_precedence(o1, o2) ||
+         has_equal_precedence(o1, o2) && !is_pow(o1));
 }
 
 struct vector *shunting_yard(struct vector *v)
